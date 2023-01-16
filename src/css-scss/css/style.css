@@ -1,6 +1,70 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: whitesmoke;
+  font-size: 16px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 200;
+  color: black;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: greenyellow;
+  height: auto;
+  padding: 1.5em 5em 1.5em 5em;
+  box-shadow: 0 0em 1em grey;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+header h1 {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 span {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+header .carrito-btn {
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 0.5em 0.3em 0.5em;
+  transition: all 0.3s ease;
+}
+
+header .carrito-btn .carrito-number {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px black;
+}
+
+header .carrito-btn .carrito-icon {
+  font-size: 2rem;
+}
+
+header .carrito-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.3);
 }
