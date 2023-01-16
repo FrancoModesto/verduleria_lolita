@@ -1,2 +1,10 @@
-# verduleria_Lolita
-E-Commerce
+# "Verdulería Lolita" - por: Franco Modesto
+
+## Descripción
+- E-Commerce ficticio.
+
+## Herramientas Utilizadas
+- Proyecto hecho en el editor de Visual Studio Code, a partir de los lenguajes HTML5, CSS3 y Javascript.
+
+## Link al Sitio Web (hosteado con Github Pages)
+- ???
