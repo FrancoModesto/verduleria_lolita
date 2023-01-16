@@ -1,0 +1,19 @@
+{
+  "name": "verduleria_lolita",
+  "version": "1.0.0",
+  "description": "E-Commerce ficticio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoModesto/verduleria_lolita.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoModesto/verduleria_lolita/issues"
+  },
+  "homepage": "https://github.com/FrancoModesto/verduleria_lolita#readme"
+}
