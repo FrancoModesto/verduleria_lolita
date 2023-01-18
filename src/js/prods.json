@@ -3,90 +3,105 @@
         "img": "🍅",
         "name": "TOMATE",
         "type": "verdura",
+        "price": "10",
         "id": "1"
     },
     {
         "img": "🍌",
         "name": "BANANA",
         "type": "fruta",
+        "price": "5",
         "id": "2"
     },
     {
         "img": "🍇",
         "name": "UVA",
         "type": "fruta",
+        "price": "15",
         "id": "3"
     },
     {
         "img": "🥑",
         "name": "PALTA",
         "type": "fruta",
+        "price": "20",
         "id": "4"
     },
     {
         "img": "🥬",
         "name": "LECHUGA",
         "type": "verdura",
+        "price": "5",
         "id": "5"
     },
     {
         "img": "🍑",
         "name": "DURAZNO",
         "type": "fruta",
+        "price": "15",
         "id": "6"
     },
     {
         "img": "🍋",
         "name": "LIMÓN",
         "type": "fruta",
+        "price": "10",
         "id": "7"
     },
     {
         "img": "🍒",
         "name": "CEREZA",
         "type": "fruta",
+        "price": "15",
         "id": "8"
     },
     {
         "img": "🍎",
         "name": "MANZANA",
         "type": "fruta",
+        "price": "10",
         "id": "9"
     },
     {
         "img": "🍉",
         "name": "SANDÍA",
         "type": "fruta",
+        "price": "20",
         "id": "10"
     },
     {
         "img": "🧅",
         "name": "CEBOLLA",
         "type": "verdura",
+        "price": "5",
         "id": "11"
     },
     {
         "img": "🥒",
         "name": "PEPINO",
         "type": "verdura",
+        "price": "10",
         "id": "12"
     },
     {
         "img": "🥦",
         "name": "BROCOLI",
         "type": "verdura",
+        "price": "10",
         "id": "13"
     },
     {
         "img": "🍆",
         "name": "BERENJENA",
         "type": "verdura",
+        "price": "12",
         "id": "14"
     },
     {
         "img": "🌽",
         "name": "CHOCLO",
         "type": "verdura",
+        "price": "15",
         "id": "15"
     }
 ]
