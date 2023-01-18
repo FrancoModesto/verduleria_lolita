@@ -2,7 +2,9 @@
 $myFont: "Exo 2", sans-serif;
 $mySecondFont: "Lobster", cursive;
 
-$myShadow: 0 0em 1em grey;
+$myShadow: 0 0 1em grey;
+$myLightShadow: 0 0 0.5em grey;
+$myDarkShadow: 0 0 1em black;
 
 *,
 *:before,
@@ -22,6 +24,8 @@ body {
     overflow-x: hidden;
 }
 
+//***********************
+//HEADER
 header {
     background-color: greenyellow;
     height: auto;
@@ -31,7 +35,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 2em;
 
     h1 {
@@ -59,6 +63,7 @@ header {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.2);
         padding: 0 0.5em 0.3em 0.5em;
+        box-shadow: $myShadow;
 
         transition: all 0.3s ease;
 
@@ -73,8 +78,220 @@ header {
 
         &:hover {
             cursor: pointer;
-            transform: scale(1.1);
+            transform: scale(1.05);
             background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+//***********************
+//MAIN
+main {
+    width: 90%;
+    margin: auto;
+
+    h2 {
+        font-family: $mySecondFont;
+        font-size: 4rem;
+        text-align: center;
+        margin: 1em 0 0.5em 0;
+
+        color: greenyellow;
+        -webkit-text-stroke: 0.1px green;
+    }
+}
+
+.productos {
+    form {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        #search {
+            width: 50%;
+            height: 2.5em;
+
+            font-family: $myFont;
+            font-size: 1rem;
+            font-weight: bold;
+
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid grey;
+            padding: 0 1em 0 1em;
+            color: black;
+            box-shadow: $myLightShadow;
+
+            &::placeholder {
+                opacity: 0.75;
+                color: grey;
+            }
+        }
+
+        #filters {
+            width: 8em;
+            height: 2.5em;
+
+            font-family: $myFont;
+            font-size: 1rem;
+            font-weight: bold;
+
+            border-radius: 5px;
+            border: 2px solid grey;
+            outline: none;
+            padding: 0 1em 0 1em;
+            color: black;
+            box-shadow: $myLightShadow;
+
+            option {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .listado-prod {
+        width: 80%;
+        margin: 5em auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3em;
+
+        .producto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 15em;
+            height: 18em;
+
+            border: 2px solid grey;
+            border-radius: 10px;
+            box-shadow: $myShadow;
+
+            transition: all 0.5s ease;
+
+            &:hover {
+                border: 2px solid green;
+                box-shadow: 0 0 2em green;
+            }
+
+            .img {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                margin-top: 0.25em;
+                margin-bottom: 1em;
+            }
+
+            .btn {
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: rgb(45, 125, 255);
+                padding: 0.5em 0.75em 0.5em 0.75em;
+
+                color: white;
+                font-weight: bold;
+
+                transition: all 0.2s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(15, 80, 175);
+                }
+            }
+        }
+    }
+}
+
+//***********************
+//FOOTER
+footer {
+    margin-top: 8em;
+    background-color: rgb(110, 175, 110);
+    box-shadow: $myDarkShadow;
+}
+
+.creator {
+    padding-top: 3em;
+    margin-bottom: 1.8em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creator h3 {
+    margin-right: 2em;
+
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
+
+    span {
+        margin-left: 0.3em;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: greenyellow;
+            text-shadow: 0 0 0.5em greenyellow;
+        }
+    }
+}
+
+.creator ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.25em;
+
+    li {
+        a {
+            display: flex;
+            border-radius: 50%;
+            box-shadow: $myDarkShadow;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: greenyellow;
+                box-shadow: none;
+                filter: drop-shadow(0 0 0.5em greenyellow);
+            }
+
+            img {
+                width: 2.8em;
+            }
+        }
+    }
+}
+
+.copy {
+    padding-bottom: 2.5em;
+
+    font-size: 1.1rem;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+
+//***********************
+//MEDIA QUERIES
+@media screen and (max-width: 800px) {
+    footer {
+        .creator {
+            flex-direction: column;
+            gap: 1em;
+
+            h3 {
+                margin: 0;
+            }
         }
     }
 }

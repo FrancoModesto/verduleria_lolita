@@ -1,0 +1,92 @@
+[
+    {
+        "img": "🍅",
+        "name": "TOMATE",
+        "type": "verdura",
+        "id": "1"
+    },
+    {
+        "img": "🍌",
+        "name": "BANANA",
+        "type": "fruta",
+        "id": "2"
+    },
+    {
+        "img": "🍇",
+        "name": "UVA",
+        "type": "fruta",
+        "id": "3"
+    },
+    {
+        "img": "🥑",
+        "name": "PALTA",
+        "type": "fruta",
+        "id": "4"
+    },
+    {
+        "img": "🥬",
+        "name": "DAVO",
+        "type": "verdura",
+        "id": "5"
+    },
+    {
+        "img": "🍑",
+        "name": "DURAZNO",
+        "type": "fruta",
+        "id": "6"
+    },
+    {
+        "img": "🍋",
+        "name": "LIMÓN",
+        "type": "fruta",
+        "id": "7"
+    },
+    {
+        "img": "🍒",
+        "name": "CEREZA",
+        "type": "fruta",
+        "id": "8"
+    },
+    {
+        "img": "🍎",
+        "name": "MANZANA",
+        "type": "fruta",
+        "id": "9"
+    },
+    {
+        "img": "🍉",
+        "name": "SANDÍA",
+        "type": "fruta",
+        "id": "10"
+    },
+    {
+        "img": "🧅",
+        "name": "CEBOLLA",
+        "type": "verdura",
+        "id": "11"
+    },
+    {
+        "img": "🥒",
+        "name": "PEPINO",
+        "type": "verdura",
+        "id": "12"
+    },
+    {
+        "img": "🥦",
+        "name": "BROCOLI",
+        "type": "verdura",
+        "id": "13"
+    },
+    {
+        "img": "🍆",
+        "name": "BERENJENA",
+        "type": "verdura",
+        "id": "14"
+    },
+    {
+        "img": "🌽",
+        "name": "CHOCLO",
+        "type": "verdura",
+        "id": "15"
+    }
+]
