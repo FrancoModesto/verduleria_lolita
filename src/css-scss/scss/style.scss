@@ -109,13 +109,18 @@ main {
         margin: 1em 0 0.5em 0;
 
         color: greenyellow;
-        -webkit-text-stroke: 0.1px green;
+        -webkit-text-stroke: 1px green;
+    }
+
+    h3 {
+        text-align: center;
     }
 }
 
 .productos {
     form {
         width: 100%;
+        height: 2.5em;
 
         display: flex;
         align-items: center;
@@ -124,7 +129,7 @@ main {
 
         #search {
             width: 50%;
-            height: 2.5em;
+            height: 100%;
 
             font-family: $myFont;
             font-size: 1rem;
@@ -145,8 +150,8 @@ main {
         }
 
         #filters {
-            width: 8em;
-            height: 2.5em;
+            width: 6.5em;
+            height: 100%;
 
             font-family: $myFont;
             font-size: 1rem;
@@ -231,7 +236,7 @@ main {
 //FOOTER
 footer {
     margin-top: 8em;
-    background-color: rgb(110, 175, 110);
+    background-color: rgb(51, 130, 51);
     box-shadow: $myDarkShadow;
 }
 
@@ -248,8 +253,7 @@ footer {
     margin-right: 2em;
 
     font-size: 1.1rem;
-    color: black;
-    font-weight: 600;
+    color: whitesmoke;
 
     span {
         margin-left: 0.3em;
@@ -293,8 +297,7 @@ footer {
 
     font-size: 1.1rem;
     text-align: center;
-    color: black;
-    font-weight: 600;
+    color: whitesmoke;
 }
 
 //***********************
