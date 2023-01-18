@@ -24,6 +24,18 @@ body {
     overflow-x: hidden;
 }
 
+::selection {
+    background-color: green;
+    color: whitesmoke;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
 //***********************
 //HEADER
 header {
@@ -123,6 +135,7 @@ main {
             border: 2px solid grey;
             padding: 0 1em 0 1em;
             color: black;
+            background-color: whitesmoke;
             box-shadow: $myLightShadow;
 
             &::placeholder {
@@ -144,7 +157,10 @@ main {
             outline: none;
             padding: 0 1em 0 1em;
             color: black;
+            background-color: whitesmoke;
             box-shadow: $myLightShadow;
+
+            cursor: pointer;
 
             option {
                 font-weight: bold;

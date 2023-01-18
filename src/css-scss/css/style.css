@@ -16,6 +16,18 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background-color: green;
+  color: whitesmoke;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 header {
   background-color: greenyellow;
   height: auto;
@@ -103,6 +115,7 @@ main h2 {
   border: 2px solid grey;
   padding: 0 1em 0 1em;
   color: black;
+  background-color: whitesmoke;
   box-shadow: 0 0 0.5em grey;
 }
 
@@ -122,7 +135,9 @@ main h2 {
   outline: none;
   padding: 0 1em 0 1em;
   color: black;
+  background-color: whitesmoke;
   box-shadow: 0 0 0.5em grey;
+  cursor: pointer;
 }
 
 .productos form #filters option {
