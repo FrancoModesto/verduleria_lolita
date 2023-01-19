@@ -1,7 +1,7 @@
 let prods = []
 let carrito = []
 
-let local = JSON.parse(localStorage.getItem("carrito"))
+const local = JSON.parse(localStorage.getItem("carrito"))
 if (local != null && local != "" && local != false && local != undefined) {
     carrito = JSON.parse(localStorage.getItem("carrito"))
 }
@@ -161,8 +161,8 @@ function filtrarProductos() {
     const tipo = inputFilters.options[inputFilters.selectedIndex].value
     const parametro = inputSearch.value.trim().toUpperCase()
 
-    let filtrados = prods.filter(prod => prod.type.includes(tipo))
-    let resultado = filtrados.filter(prod => prod.name.includes(parametro))
+    const filtrados = prods.filter(prod => prod.type.includes(tipo))
+    const resultado = filtrados.filter(prod => prod.name.includes(parametro))
 
     if (resultado.length > 0) {
         renderizarProductos(resultado)
