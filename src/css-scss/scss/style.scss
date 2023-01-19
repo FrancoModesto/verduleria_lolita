@@ -40,7 +40,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 0.5em;
     background-color: rgb(53, 53, 53);
 
     &:hover {
@@ -53,6 +52,27 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
+}
+
+.default-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: $myLightShadow;
+
+    padding: 0.5em 0.75em 0.5em 0.75em;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: black;
+    }
 }
 
 //**********************
@@ -86,21 +106,20 @@ header {
     }
 
     .carrito-btn {
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: $myDarkShadow;
+
+        padding: 0 0.75em 0.3em 0.85em;
+
         display: flex;
         align-items: flex-end;
         gap: 1em;
 
-        border: 2px solid black;
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 0 0.75em 0.3em 0.75em;
-        box-shadow: $myShadow;
-
-        transition: all 0.3s ease;
-
         .carrito-number {
             font-size: 1.5rem;
             -webkit-text-stroke: 1px black;
+            color: black;
         }
 
         .carrito-icon {
@@ -108,9 +127,8 @@ header {
         }
 
         &:hover {
-            cursor: pointer;
             transform: scale(1.05);
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.4);
         }
     }
 }
@@ -146,18 +164,19 @@ main {
     left: 0;
 
     width: 30em;
-    height: 25em;
+    height: 30em;
+    overflow: hidden;
 
     border-radius: 10px;
     border: 2px solid black;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 2em 0 1em 0;
+    padding-top: 2em;
 
     transition: all 0.75s ease;
 
     .listado-carrito {
         width: 95%;
-        height: 100%;
+        height: 80%;
         margin: auto;
 
         display: flex;
@@ -166,7 +185,7 @@ main {
         gap: 0.5em;
 
         overflow-y: auto;
-        padding-right: 0.2em;
+        padding: 0 0.2em 1em 0;
 
         .empty-text {
             margin: auto;
@@ -205,20 +224,57 @@ main {
             }
 
             .btn-rem {
-                border: 2px solid black;
-                border-radius: 5px;
                 background-color: rgb(200, 0, 0);
-                padding: 0.5em 0.75em 0.5em 0.75em;
-
-                color: white;
-                font-weight: bold;
-
-                transition: all 0.2s ease;
 
                 &:hover {
-                    cursor: pointer;
                     background-color: rgb(120, 0, 0);
                 }
+            }
+        }
+    }
+
+    .botonera {
+        height: 21%;
+
+        background-color: rgba(0, 0, 0, 0.4);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .total {
+            border-radius: 0;
+            box-shadow: $myDarkShadow;
+            background-color: whitesmoke;
+            color: black;
+
+            &:hover {
+                cursor: auto;
+            }
+
+            .total-text {
+                -webkit-text-stroke: 1px black;
+                margin-right: 0.2em;
+            }
+        }
+
+        .btn-empty {
+            box-shadow: $myDarkShadow;
+            background-color: rgb(200, 0, 0);
+
+            &:hover {
+                background-color: rgb(120, 0, 0);
+            }
+        }
+
+        .btn-buy {
+            box-shadow: $myDarkShadow;
+            background-color: rgb(51, 130, 51);
+
+            &:hover {
+                background-color: rgb(0, 90, 0);
             }
         }
     }
@@ -333,19 +389,10 @@ main {
                 margin-bottom: 1em;
             }
 
-            .btn {
-                border: 2px solid black;
-                border-radius: 5px;
+            .btn-add {
                 background-color: rgb(45, 125, 255);
-                padding: 0.5em 0.75em 0.5em 0.75em;
-
-                color: white;
-                font-weight: bold;
-
-                transition: all 0.2s ease;
 
                 &:hover {
-                    cursor: pointer;
                     background-color: rgb(15, 80, 175);
                 }
             }
@@ -423,13 +470,6 @@ footer {
 
 //**********************
 //MEDIA QUERIES
-@media screen and (max-width: 500px) {
-    .carrito {
-        width: 100%;
-        height: 50%;
-    }
-}
-
 @media screen and (max-width: 800px) {
     header {
         .carrito-btn {
@@ -437,6 +477,11 @@ footer {
             bottom: 2em;
             right: 2em;
         }
+    }
+
+    .carrito {
+        width: 100%;
+        height: 60%;
     }
 
     footer {
