@@ -106,9 +106,9 @@ function calcularTotal(array) {
 
 function renderizarCarrito(array) {
     localStorage.setItem("carrito", JSON.stringify(array))
-    carritoNumber.innerHTML = `${array.length}`
 
     if (array.length > 0) {
+        carritoNumber.innerHTML = `${array.length}`
         calcularTotal(array)
         listadoCarrito.innerHTML = ""
         array.sort(ordenarPorNombre)
@@ -123,6 +123,7 @@ function renderizarCarrito(array) {
         })
         darEventosAProdsCarrito(array)
     } else {
+        carritoNumber.innerHTML = "0"
         carritoPrice.innerHTML = "$0"
         listadoCarrito.innerHTML = `<h3 class="empty-text">EL CARRITO SE ENCUENTRA VACÍO</h3>`
     }
