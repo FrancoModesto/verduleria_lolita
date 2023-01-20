@@ -45,6 +45,13 @@ function darEventosAProds(array) {
     prodsBtns.forEach((prodHTML, i) => {
         prodHTML.addEventListener("click", () => {
             agregarACarrito(array[i])
+            Toastify({
+                text: "Agregado al Carrito!",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, rgb(45, 125, 255), rgb(15, 80, 175))",
+                }
+            }).showToast();
         })
     })
 }
@@ -93,6 +100,13 @@ function darEventosAProdsCarrito(array) {
     prodsCarritoBtns.forEach((prodHTML, i) => {
         prodHTML.addEventListener("click", () => {
             removerDeCarrito(i, prodHTML)
+            Toastify({
+                text: "Eliminado del Carrito",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, rgb(200, 0, 0), rgb(120, 0, 0))",
+                }
+            }).showToast();
         })
     })
 }
@@ -149,9 +163,23 @@ function vaciarCarrito() {
 
 carritoBtnEmpty.addEventListener("click", () => {
     vaciarCarrito()
+    Toastify({
+        text: "Carrito Vaciado",
+        duration: 3000,
+        style: {
+            background: "linear-gradient(to right, rgb(200, 0, 0), rgb(120, 0, 0))",
+        }
+    }).showToast();
 })
 
 carritoBtnBuy.addEventListener("click", () => {
+    Toastify({
+        text: `Compra Realizada por un Total de ${carritoPrice.textContent}!`,
+        duration: 5000,
+        style: {
+            background: "linear-gradient(to right, rgb(51, 130, 51), rgb(0, 90, 0))",
+        }
+    }).showToast();
     vaciarCarrito()
 })
 
