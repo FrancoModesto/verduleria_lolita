@@ -184,7 +184,12 @@ inputPrices.addEventListener("change", () => {
     filtrarProductos()
 })
 
+let oldValue = ""
 inputSearch.addEventListener("input", () => {
+    if (inputSearch.value.length > 20) {
+        inputSearch.value = oldValue
+    }
+    oldValue = inputSearch.value
     filtrarProductos()
 })
 
