@@ -23,20 +23,12 @@ const carritoPrice = document.querySelector(".total-price")
 
 
 //LISTADO DE PRODUCTOS
-function comparacion(a, b) {
-    if (inputPrices.options[inputPrices.selectedIndex].value === "0") {
-        return (a.price - b.price)
-    } else {
-        return (b.price - a.price)
-    }
+function comparacionPorPrecio(a, b) {
+    return ((inputPrices.options[inputPrices.selectedIndex].value === "0") ? (a.price - b.price) : (b.price - a.price))
 }
 
 function ordenarPorNombre(a, b) {
-    if (a.name > b.name) {
-        return 1
-    } else {
-        return -1
-    }
+    return ((a.name > b.name) ? 1 : -1)
 }
 
 function darEventosAProds(array) {
@@ -58,7 +50,7 @@ function darEventosAProds(array) {
 
 function renderizarProductos(array) {
     listado.innerHTML = ""
-    array.sort(comparacion)
+    array.sort(comparacionPorPrecio)
     array.forEach(prod => {
         const div = document.createElement("div")
         div.className = "producto"
@@ -77,19 +69,13 @@ async function obtenerProductos() {
     renderizarProductos(prods)
 }
 
-obtenerProductos()
-
 
 //CARRITO
 carritoBtn.addEventListener("click", () => {
-    if (carritoSlide.style.top == "-1em") {
-        carritoSlide.style.top = "-100%"
-    } else {
-        carritoSlide.style.top = "-1em"
-    }
+    (carritoSlide.style.top == "-1em") ? (carritoSlide.style.top) = "-100%" : (carritoSlide.style.top = "-1em")
 })
 
-function removerDeCarrito(i, prodHTML) {
+function removerDeCarrito(i) {
     carrito.splice(i, 1)
     renderizarCarrito(carrito)
 }
@@ -99,7 +85,7 @@ function darEventosAProdsCarrito(array) {
 
     prodsCarritoBtns.forEach((prodHTML, i) => {
         prodHTML.addEventListener("click", () => {
-            removerDeCarrito(i, prodHTML)
+            removerDeCarrito(i)
             Toastify({
                 text: "Eliminado del Carrito",
                 duration: 3000,
@@ -112,15 +98,8 @@ function darEventosAProdsCarrito(array) {
 }
 
 function calcularTotal(array) {
-    if (array.length === 1) {
-        carritoPrice.innerHTML = `$${parseInt(array[0].price)}`
-    } else {
-        let total = 0
-        array.forEach(prod => {
-            total += Number(prod.price)
-        })
-        carritoPrice.innerHTML = `$${total}`
-    }
+    const total = (array.map(prod => Number(prod.price))).reduce((a, b) => a + b)
+    carritoPrice.innerHTML = `$${total}`
 }
 
 function renderizarCarrito(array) {
@@ -151,8 +130,6 @@ function agregarACarrito(prod) {
     carrito.push(prod)
     renderizarCarrito(carrito)
 }
-
-renderizarCarrito(carrito)
 
 
 //CARRITO - BTNS
@@ -210,3 +187,8 @@ inputPrices.addEventListener("change", () => {
 inputSearch.addEventListener("input", () => {
     filtrarProductos()
 })
+
+
+//ON RUN
+obtenerProductos()
+renderizarCarrito(carrito)
