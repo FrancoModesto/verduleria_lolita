@@ -98,7 +98,7 @@ function darEventosAProdsCarrito(array) {
 }
 
 function calcularTotal(array) {
-    const total = (array.map(prod => Number(prod.price))).reduce((a, b) => a + b)
+    const total = (array.map(prod => prod.price)).reduce((a, b) => a + b)
     carritoPrice.innerHTML = `$${total}`
 }
 
