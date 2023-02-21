@@ -1,6 +1,9 @@
 $myFont: "Exo 2", sans-serif;
 $mySecondFont: "Lobster", cursive;
 
+$myGreen: rgb(40, 225, 100);
+$myOtherGreen: rgb(25, 95, 50);
+
 $myShadow: 0 0 1em grey;
 $myLightShadow: 0 0 0.5em grey;
 $myDarkShadow: 0 0 1em black;
@@ -78,7 +81,7 @@ input[type="search"]::-webkit-search-results-decoration {
 //**********************
 //HEADER
 header {
-    background-color: greenyellow;
+    background-color: $myGreen;
     height: auto;
     padding: 1.5em 5em 1.5em 5em;
     box-shadow: $myShadow;
@@ -145,7 +148,7 @@ main {
         text-align: center;
         margin: 1em 0 0.5em 0;
 
-        color: greenyellow;
+        color: $myGreen;
         -webkit-text-stroke: 1px green;
     }
 
@@ -271,10 +274,10 @@ main {
 
         .btn-buy {
             box-shadow: $myDarkShadow;
-            background-color: rgb(51, 130, 51);
+            background-color: green;
 
             &:hover {
-                background-color: rgb(0, 90, 0);
+                background-color: $myOtherGreen;
             }
         }
     }
@@ -371,8 +374,8 @@ main {
             transition: all 0.5s ease;
 
             &:hover {
-                border: 2px solid greenyellow;
-                box-shadow: 0 0 2em greenyellow;
+                border: 2px solid $myGreen;
+                box-shadow: 0 0 2em $myGreen;
             }
 
             .img {
@@ -404,7 +407,7 @@ main {
 //FOOTER
 footer {
     margin-top: 8em;
-    background-color: rgb(51, 130, 51);
+    background-color: $myOtherGreen;
     box-shadow: $myDarkShadow;
 }
 
@@ -428,8 +431,8 @@ footer {
         transition: all 0.2s ease;
 
         &:hover {
-            color: greenyellow;
-            text-shadow: 0 0 0.5em greenyellow;
+            color: $myGreen;
+            text-shadow: 0 0 0.5em $myGreen;
         }
     }
 }
@@ -448,9 +451,9 @@ footer {
 
             &:hover {
                 transform: scale(1.1);
-                background-color: greenyellow;
+                background-color: $myGreen;
                 box-shadow: none;
-                filter: drop-shadow(0 0 0.5em greenyellow);
+                filter: drop-shadow(0 0 0.5em $myGreen);
             }
 
             img {

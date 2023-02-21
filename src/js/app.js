@@ -154,7 +154,7 @@ carritoBtnBuy.addEventListener("click", () => {
         text: `Compra Realizada por un Total de ${carritoPrice.textContent}!`,
         duration: 5000,
         style: {
-            background: "linear-gradient(to right, rgb(51, 130, 51), rgb(0, 90, 0))",
+            background: "linear-gradient(to right, rgb(0, 128, 0), rgb(25, 95, 50))",
         }
     }).showToast();
     vaciarCarrito()

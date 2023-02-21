@@ -64,7 +64,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 header {
-  background-color: greenyellow;
+  background-color: #28e164;
   height: auto;
   padding: 1.5em 5em 1.5em 5em;
   box-shadow: 0 0 1em grey;
@@ -125,7 +125,7 @@ main h2 {
   font-size: 4rem;
   text-align: center;
   margin: 1em 0 0.5em 0;
-  color: greenyellow;
+  color: #28e164;
   -webkit-text-stroke: 1px green;
 }
 
@@ -241,11 +241,11 @@ main h4 {
 
 .carrito .botonera .btn-buy {
   box-shadow: 0 0 1em black;
-  background-color: #338233;
+  background-color: green;
 }
 
 .carrito .botonera .btn-buy:hover {
-  background-color: #005a00;
+  background-color: #195f32;
 }
 
 .productos form {
@@ -328,8 +328,8 @@ main h4 {
 }
 
 .productos .listado-prod .producto:hover {
-  border: 2px solid greenyellow;
-  box-shadow: 0 0 2em greenyellow;
+  border: 2px solid #28e164;
+  box-shadow: 0 0 2em #28e164;
 }
 
 .productos .listado-prod .producto .img {
@@ -356,7 +356,7 @@ main h4 {
 
 footer {
   margin-top: 8em;
-  background-color: #338233;
+  background-color: #195f32;
   box-shadow: 0 0 1em black;
 }
 
@@ -380,8 +380,8 @@ footer {
 }
 
 .creator h3 span:hover {
-  color: greenyellow;
-  text-shadow: 0 0 0.5em greenyellow;
+  color: #28e164;
+  text-shadow: 0 0 0.5em #28e164;
 }
 
 .creator ul {
@@ -399,9 +399,9 @@ footer {
 
 .creator ul li a:hover {
   transform: scale(1.1);
-  background-color: greenyellow;
+  background-color: #28e164;
   box-shadow: none;
-  filter: drop-shadow(0 0 0.5em greenyellow);
+  filter: drop-shadow(0 0 0.5em #28e164);
 }
 
 .creator ul li a img {
